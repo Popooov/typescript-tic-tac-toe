@@ -30,6 +30,8 @@ function createCell(row: number, col: number, content: Cell = "") {
     if(boardState[row][col] === '') {
       boardState[row][col] = currentMove
       currentMove = currentMove === 'X' ? 'O' : 'X'
+
+      renderBoard()
     }
   })
   return cell;
